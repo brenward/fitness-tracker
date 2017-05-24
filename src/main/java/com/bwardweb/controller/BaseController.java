@@ -13,6 +13,12 @@ public class BaseController {
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String home(){
 		log.debug("Index.jsp");
+		return "redirect:/main-flow";
+	}
+	
+	@RequestMapping(value="/index", method=RequestMethod.GET)
+	public String index(){
+		log.debug("Index.jsp");
 		return "index";
 	}
 }
