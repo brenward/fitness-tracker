@@ -12,7 +12,31 @@ public class BaseController {
 	
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String home(){
-		log.debug("main flow");
+		log.debug("homepage");
+		return "index";
+	}
+	
+	@RequestMapping(value="/login", method=RequestMethod.GET)
+	public String login(){
+		log.debug("login");
+		return "login";
+	}
+	
+	@RequestMapping(value="/register", method=RequestMethod.GET)
+	public String register(){
+		log.debug("registration");
+		return "register";
+	}
+	
+	@RequestMapping(value="/leaderboard", method=RequestMethod.GET)
+	public String leaderBoard(){
+		log.debug("leader board");
+		return "leaderBoard";
+	}
+	
+	@RequestMapping(value="/hub", method=RequestMethod.GET)
+	public String userHome(){
+		log.debug("User hub page");
 		return "redirect:/main-flow";
 	}
 	

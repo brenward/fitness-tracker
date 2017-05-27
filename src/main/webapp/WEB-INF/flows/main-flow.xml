@@ -3,8 +3,31 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/webflow
         http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+	
+	<!-- <view-state id="start" view="hub"></view-state> -->
 
-	<view-state id="start" view="index">
+	<view-state id="start" view="hub">
+		<transition on="editProfile" to="profile"></transition>
+		<transition on="registerActivities" to="registerActivities"></transition>
+		<transition on="editActivities" to="editActivities"></transition>
+		<transition on="logout" to="logout"></transition>
 	</view-state>
+	
+	<view-state id="profile" view="profile">
+		<transition on="home" to="start"></transition>
+		<transition on="logout" to="logout"></transition>
+	</view-state>
+	
+	<view-state id="registerActivities" view="activityReg">
+		<transition on="home" to="start"></transition>
+		<transition on="logout" to="logout"></transition>
+	</view-state>
+	
+	<view-state id="editActivities" view="activityEnt">
+		<transition on="home" to="start"></transition>
+		<transition on="logout" to="logout"></transition>
+	</view-state>
+	
+	<end-state id="logout" view="externalRedirect:/"></end-state>
 
 </flow>

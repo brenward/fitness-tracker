@@ -10,38 +10,81 @@
        <put-attribute name="body" value="" />   
    </definition> 
    
-   <!-- Main FLow -->
+   <!-- Home Page Entry -->
    <definition name="index" extends="base-definition">  
-       <put-attribute name="title" value="Main Flow" />  
+       <put-attribute name="title" value="Fitness Tracker" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/index.jsp" />  
    </definition>
    
+   <!-- Login -->
+   <definition name="login" extends="base-definition">  
+       <put-attribute name="title" value="Fitness Tracker - Login" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/login.jsp" />  
+   </definition>
+   
+   <!-- Registration -->
+   <definition name="register" extends="base-definition">  
+       <put-attribute name="title" value="Fitness Tracker - Register" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/register.jsp" />  
+   </definition>
+   
+   <!-- Public LeaderBoard -->
+   <definition name="leaderBoard" extends="base-definition">  
+       <put-attribute name="title" value="Fitness Tracker - Leader Board" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/leaderBoard.jsp" />  
+   </definition>
+   
+   <!-- USER SPECIFIC TILES -->
+   
+   <!-- Hub -->
+   <definition name="hub" extends="base-definition">  
+       <put-attribute name="title" value="Fitness Tracker - Hub" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/user/hub.jsp" />  
+   </definition>
+   
+   <!-- Profile -->
+   <definition name="profile" extends="base-definition">  
+       <put-attribute name="title" value="Fitness Tracker - Profile" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/user/profile.jsp" />  
+   </definition>
+   
+   <!-- Activity Entry -->
+   <definition name="activityEnt" extends="base-definition">  
+       <put-attribute name="title" value="Fitness Tracker - Add Activity" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/user/activityEntry.jsp" />  
+   </definition>
+   
+   <!-- Activity Registration -->
+   <definition name="activityReg" extends="base-definition">  
+       <put-attribute name="title" value="Fitness Tracker - Register Activity" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/user/activityRegistration.jsp" />  
+   </definition>
    
    
-   <!-- TILES FOR WEBFLOW DEMONSTARTION PURPOSES --> 
+   <!-- TILES FOR WEBFLOW DEMONSTRATION PURPOSES --> 
   
    <!-- Test 1 FLow -->
    <definition name="test1" extends="base-definition">  
        <put-attribute name="title" value="Main Flow" />  
-       <put-attribute name="body" value="/WEB-INF/views/pages/test1.jsp" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/webflowdemo/test1.jsp" />  
    </definition>
    
    <!-- MVC Page -->
    <definition name="mvc" extends="base-definition">  
        <put-attribute name="title" value="MVC" />  
-       <put-attribute name="body" value="/WEB-INF/views/pages/mvc.jsp" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/webflowdemo/mvc.jsp" />  
    </definition>  
    
    <!-- Test 2 Flow -->
    <definition name="test2" extends="base-definition">  
        <put-attribute name="title" value="Test Flow" />  
-       <put-attribute name="body" value="/WEB-INF/views/pages/test2.jsp" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/webflowdemo/test2.jsp" />  
    </definition>
    
    <!-- Flow End-->
    <definition name="flowEnd" extends="base-definition">  
        <put-attribute name="title" value="Flow End" />  
-       <put-attribute name="body" value="/WEB-INF/views/pages/flowEnd.jsp" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/webflowdemo/flowEnd.jsp" />  
    </definition> 
   
 </tiles-definitions>
