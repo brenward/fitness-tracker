@@ -12,7 +12,7 @@ public class BaseController {
 	
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String home(){
-		log.debug("Index.jsp");
+		log.debug("main flow");
 		return "redirect:/main-flow";
 	}
 	
@@ -20,5 +20,11 @@ public class BaseController {
 	public String index(){
 		log.debug("Index.jsp");
 		return "index";
+	}
+	
+	@RequestMapping(value="/test", method=RequestMethod.GET)
+	public String test(){
+		log.debug("test flow");
+		return "redirect:/test-flow";
 	}
 }

@@ -53,8 +53,8 @@
 	
 	<!-- The registry of executable flow definitions -->
 	<webflow-config:flow-registry id="flowRegistry"
-		flow-builder-services="flowBuilderServices">
-		<webflow-config:flow-location-pattern value="/WEB-INF/flows/main-flow.xml" />
+		flow-builder-services="flowBuilderServices" base-path="/WEB-INF/flows">
+		<webflow-config:flow-location-pattern value="/*-flow.xml" />
 	</webflow-config:flow-registry>
 	
 	<!-- Plugs in a custom creator for Web Flow views -->
