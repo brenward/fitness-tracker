@@ -11,14 +11,6 @@
 		
 	<context:component-scan base-package="com.bwardweb.controller"></context:component-scan>
 	<mvc:annotation-driven></mvc:annotation-driven>
-	<!-- <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix">
-			<value>/WEB-INF/jsp/</value>
-		</property>
-		<property name="suffix">
-			<value>.jsp</value>
-		</property>
-	</bean> -->
 	
 	<bean id="tilesViewResolver"
 		 class="org.springframework.web.servlet.view.UrlBasedViewResolver">
