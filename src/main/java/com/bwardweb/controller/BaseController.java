@@ -16,15 +16,23 @@ public class BaseController {
 		return "redirect:/main-flow";
 	}
 	
-	@RequestMapping(value="/index", method=RequestMethod.GET)
-	public String index(){
+	
+	// THESE PATHS ARE FOR WEBFLOW DEMONSTRATION
+	@RequestMapping(value="/mvc", method=RequestMethod.GET)
+	public String mvc(){
 		log.debug("mvc.jsp");
 		return "mvc";
 	}
 	
-	@RequestMapping(value="/test", method=RequestMethod.GET)
-	public String test(){
-		log.debug("test flow");
-		return "redirect:/test-flow";
+	@RequestMapping(value="/test1", method=RequestMethod.GET)
+	public String testOne(){
+		log.debug("test 1 flow");
+		return "redirect:/test-1-flow";
+	}
+	
+	@RequestMapping(value="/test2", method=RequestMethod.GET)
+	public String testTwo(){
+		log.debug("test 2 flow");
+		return "redirect:/test-2-flow";
 	}
 }

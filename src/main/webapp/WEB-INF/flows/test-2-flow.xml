@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/webflow
         http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
-	<view-state id="start" view="test">
+	<view-state id="start" view="test2">
 		<transition on="nextScreen" to="flowEnd"></transition>
 	</view-state>
 	
@@ -12,6 +12,6 @@
 		<transition on="mvc" to="mvcEndFlow"></transition>
 	</view-state>
 	
-	<end-state id="mvcEndFlow" view="externalRedirect:index"></end-state>
+	<end-state id="mvcEndFlow" view="externalRedirect:mvc"></end-state>
 
 </flow>

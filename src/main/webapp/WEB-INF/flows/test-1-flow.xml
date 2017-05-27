@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+        http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+	<view-state id="start" view="test1">
+		<transition on="nextScreen" to="flowEnd"></transition>
+		<transition on="mvc" to="mvcEndFlow"></transition>
+		<transition on="nextFlow" to="nextFlowEndFlow"></transition>
+	</view-state>
+	
+	<view-state id="flowEnd" view="flowEnd">
+		<transition on="mvc" to="mvcEndFlow"></transition>
+	</view-state>
+	
+	<end-state id="mvcEndFlow" view="externalRedirect:mvc"></end-state>
+	<end-state id="nextFlowEndFlow" view="externalRedirect:test2"></end-state>
+
+</flow>

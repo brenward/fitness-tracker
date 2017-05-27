@@ -8,12 +8,22 @@
        template="/WEB-INF/views/tiles/layouts/default.jsp">  
        <put-attribute name="title" value="" />  
        <put-attribute name="body" value="" />   
-   </definition>  
-  
+   </definition> 
+   
    <!-- Main FLow -->
    <definition name="index" extends="base-definition">  
        <put-attribute name="title" value="Main Flow" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/index.jsp" />  
+   </definition>
+   
+   
+   
+   <!-- TILES FOR WEBFLOW DEMONSTARTION PURPOSES --> 
+  
+   <!-- Test 1 FLow -->
+   <definition name="test1" extends="base-definition">  
+       <put-attribute name="title" value="Main Flow" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/test1.jsp" />  
    </definition>
    
    <!-- MVC Page -->
@@ -22,10 +32,10 @@
        <put-attribute name="body" value="/WEB-INF/views/pages/mvc.jsp" />  
    </definition>  
    
-   <!-- Test Flow -->
-   <definition name="test" extends="base-definition">  
+   <!-- Test 2 Flow -->
+   <definition name="test2" extends="base-definition">  
        <put-attribute name="title" value="Test Flow" />  
-       <put-attribute name="body" value="/WEB-INF/views/pages/test.jsp" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/test2.jsp" />  
    </definition>
    
    <!-- Flow End-->
