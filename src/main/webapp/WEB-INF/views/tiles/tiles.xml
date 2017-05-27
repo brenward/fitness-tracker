@@ -10,16 +10,28 @@
        <put-attribute name="body" value="" />   
    </definition>  
   
-   <!-- Home Page -->
+   <!-- Main FLow -->
    <definition name="index" extends="base-definition">  
-       <put-attribute name="title" value="Welcome" />  
+       <put-attribute name="title" value="Main Flow" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/index.jsp" />  
-   </definition> 
+   </definition>
    
-   <!-- Home Page -->
+   <!-- MVC Page -->
+   <definition name="mvc" extends="base-definition">  
+       <put-attribute name="title" value="MVC" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/mvc.jsp" />  
+   </definition>  
+   
+   <!-- Test Flow -->
    <definition name="test" extends="base-definition">  
-       <put-attribute name="title" value="Test" />  
+       <put-attribute name="title" value="Test Flow" />  
        <put-attribute name="body" value="/WEB-INF/views/pages/test.jsp" />  
+   </definition>
+   
+   <!-- Flow End-->
+   <definition name="flowEnd" extends="base-definition">  
+       <put-attribute name="title" value="Flow End" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/flowEnd.jsp" />  
    </definition> 
   
 </tiles-definitions>

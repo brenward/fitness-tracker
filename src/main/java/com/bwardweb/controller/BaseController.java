@@ -18,8 +18,8 @@ public class BaseController {
 	
 	@RequestMapping(value="/index", method=RequestMethod.GET)
 	public String index(){
-		log.debug("Index.jsp");
-		return "index";
+		log.debug("mvc.jsp");
+		return "mvc";
 	}
 	
 	@RequestMapping(value="/test", method=RequestMethod.GET)

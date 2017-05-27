@@ -5,6 +5,13 @@
         http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
 	<view-state id="start" view="test">
+		<transition on="nextScreen" to="flowEnd"></transition>
 	</view-state>
+	
+	<view-state id="flowEnd" view="flowEnd">
+		<transition on="mvc" to="mvcEndFlow"></transition>
+	</view-state>
+	
+	<end-state id="mvcEndFlow" view="externalRedirect:index"></end-state>
 
 </flow>
