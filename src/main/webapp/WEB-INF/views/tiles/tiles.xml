@@ -34,6 +34,12 @@
        <put-attribute name="body" value="/WEB-INF/views/pages/leaderBoard.jsp" />  
    </definition>
    
+   <!-- Public LeaderBoard -->
+   <definition name="denied" extends="base-definition">  
+       <put-attribute name="title" value="Fitness Tracker - Access Denied" />  
+       <put-attribute name="body" value="/WEB-INF/views/pages/denied.jsp" />  
+   </definition>
+   
    <!-- USER SPECIFIC TILES -->
    
    <!-- Hub -->

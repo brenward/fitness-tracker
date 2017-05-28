@@ -34,6 +34,12 @@ public class BaseController {
 		return "leaderBoard";
 	}
 	
+	@RequestMapping(value="/denied", method=RequestMethod.GET)
+	public String accessDenied(){
+		log.debug("Access Denied page");
+		return "denied";
+	}
+	
 	@RequestMapping(value="/hub", method=RequestMethod.GET)
 	public String userHome(){
 		log.debug("User hub page");
