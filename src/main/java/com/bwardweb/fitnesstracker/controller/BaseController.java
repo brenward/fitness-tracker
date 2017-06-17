@@ -1,18 +1,25 @@
-package com.bwardweb.controller;
+package com.bwardweb.fitnesstracker.controller;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.bwardweb.fitnesstracker.dao.TestDao;
 
 @Controller
 public class BaseController {
 	
 	private static final Logger log = Logger.getLogger(BaseController.class);
 	
+	@Autowired
+	private TestDao testDao;
+	
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public String home(){
 		log.debug("homepage");
+		log.debug("Users in database: " + testDao.getUsersCount());
 		return "index";
 	}
 	
